@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<section id="header">
+    <nav class="topnav">
+        <ul>
+            <li><a class="active" href="#">{ Java OOP Basics }</a></li>
+            <li><a href="#classSection">Class</a></li>
+            <li><a href="#constructorSection">Constructor</a></li>
+            <li><a href="#instanceSection">Instance</a></li>
+            <li><a href="#methodsSection">Methods</a></li>
+        </ul>
+    </nav>
+</section>
+
+
+<div style="padding-left:16px">
+
+</div>
+
+<section id="hero">
+    <div class="container">
+        <h1>Java OOP Basics</h1>
+        <p>von...</p>
+        <ul>
+            <li>Roger</li>
+            <li>Mats</li>
+            <li>Markus</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- Class Section -->
+<section id="classSection">
+    <div class="container">
+        <div>
+        <span class="section-body">
+            <h2 class="section-header">Was ist eine Class in Java?</h2>
+            <p class="text-desc">In Java haben Klassen drei Hauptaufgaben: <br>1. Klassen legen die Struktur von Objekten fest. <br>2. Klassen bestimmen das Verhalten von Objekten. <br>3. Klassen werden zum Erzeugen von Objekten verwendet. <br>Ein Objekt, das von einer Klasse  erzeugt wurde, nennt man eine Instanz. (Quelle: A. Hölzl, Matthias, Allaithy Raed, and Martin Wirsing. Java kompakt: Eine Einführung in die Software-Entwicklung mit Java. Springer-Verlag Berlin Heidelberg, 2013.)</p>
+            <div class="codeBlock">
+                <p>public class Person {<br><span class="codeTab">
+    &nbsp;// Attribute<br>
+    &nbsp;String name;<br>
+    &nbsp;int alter;<br>
+    <br>
+    &nbsp;// Konstruktor<br>
+    &nbsp;public Person(String name, int alter) {<br>
+        &nbsp;&nbsp;this.name = name;<br>
+        &nbsp;&nbsp;this.alter = alter;<br>
+    &nbsp;}<br>
+    <br>
+    &nbsp;// Methoden<br>
+    &nbsp;public void printInfo() {<br><span class="codeTab">
+                        &nbsp;&nbsp;System.out.println("Name: " + name); <br>
+            &nbsp;&nbsp;System.out.println("Alter: " + alter);<br></span>
+    &nbsp;}<br></span>
+            }<br>
+            </p>
+        </div>
+
+    </div>
+    <div class="button-container">
+        <a class="btn" href="#">Mehr erfahren</a>
+    </div>
+    </div>
+</section>
+
+
+<!-- Constructor Section -->
+<section id="constructorSection">
+    <div class="container">
+        <div><span class="section-body">
+        <h2 class="section-header">Was ist ein Constructor in Java?</h2>
+        <p class="text-desc">Konstruktoren dienen zum Initialisieren von neu erzeugten Objekten. Genau wie Methoden konnen sie Parameter haben; einen Konstruktor ohne Parameter nennt ¨ man auch Standardkonstruktor. Wenn kein Konstruktor definiert wird, erzeugt Java automatisch einen Standardkonstruktor. (Quelle: A. Hölzl, Matthias, Allaithy Raed, and Martin Wirsing. Java kompakt: Eine Einführung in die Software-Entwicklung mit Java, S. 80, Springer-Verlag Berlin Heidelberg, 2013.)</p>
+        <div class="codeBlock">
+            <p>// Konstruktor aufrufen <br>
+                Person person1 = new Person("Thomas", 30);
+</p>
+        </div>
+    </span>
+        </div>
+        <div class="button-container">
+            <a class="btn">Mehr erfahren</a>
+        </div>
+    </div>
+</section
+>
+
+
+<!-- Instance Section -->
+<section id="instanceSection">
+    <div class="container">
+        <div><span class="section-body">
+        <h2 class="section-header">Was ist eine Instanz in Java?</h2>
+        <p class="text-desc">Ein Objekt, das die von einer Klasse A vorgegebene "Form" hat, nennt man Instanz der Klasse A oder Objekt vom Typ A. Zum Erzeugen von Instanzen wird ein Konstruktor der entsprechenden Klasse verwendet. Jede Instanz verfügt über Speicherplatz für alle Instanzvariablen ihrer Klasse und kann alle Methoden dieser Klasse zum Manipulieren ihrer Daten ausführen. Quelle: A. Hölzl, Matthias, Allaithy Raed, and Martin Wirsing. Java kompakt: Eine Einführung in die Software-Entwicklung mit Java, S. 9, Springer-Verlag Berlin Heidelberg, 2013.)</p>
+        <div class="codeBlock">
+            <p>// Neue Instanz der Klasse Person erstellen <br>
+                Person person1 = new Person("Thomas", 30);
+            </p>
+        </div>
+    </span>
+        </div>
+        <div class="button-container">
+            <a class="btn">Mehr erfahren</a>
+        </div>
+    </div>
+</section
+>
+
+
+<!-- Methods Section -->
+<section id="methodsSection">
+    <div class="container">
+        <div><span class="section-body">
+        <h2 class="section-header">Was ist eine Methode in Java?</h2>
+        <p class="text-desc"> Eine Methode ist ein Codeblock, der nur ausgeführt wird, wenn er aufgerufen wird. Sie können Daten, sogenannte Parameter, an eine Methode übergeben. Methoden werden verwendet, um bestimmte Aktionen auszuführen, und sie werden auch als Funktionen bezeichnet. Warum Methoden verwenden? Um Code wiederzuverwenden: Sie definieren den Code einmal und können ihn dann mehrfach verwenden.</p>
+        <div class="codeBlock">
+            <p>// Methode aufrufen <br>
+            person1.printInfo();
+</p>
+        </div>
+    </span>
+        </div>
+        <div class="button-container">
+            <a class="btn" href="https://www.w3schools.com/java/java_methods.asp">Mehr erfahren</a>
+        </div>
+    </div>
+</section>
+
+
+<section id="footer">&#169; 2024 Roger, Mats, Markus</section>
+</body>
+</html>
